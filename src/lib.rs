@@ -297,6 +297,7 @@ impl Client {
         let value = format!("--jobserver-fds={0} --jobserver-auth={0}", arg);
         cmd.env("CARGO_MAKEFLAGS", &value);
         cmd.env("MAKEFLAGS", &value);
+        cmd.env("MFLAGS", &value);
         self.inner.configure(cmd);
     }
 
